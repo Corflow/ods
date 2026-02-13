@@ -7,140 +7,187 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
-            font-family: Verdana, 'Segoe UI', Tahoma, Geneva, sans-serif;
+            background-color: #001e26;
+            color: #E9D8A6;
+            font-family: Arial, sans-serif;
+            text-align: center;
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
         }
 
-        header {
-            background: linear-gradient(135deg, #333, #555);
-            color: #fff;
+        hr {
+            height: 2px;
+            background-color: #CA6702;
+            border: none;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
             padding: 20px;
-            text-align: center;
+        }
+
+        .logo img {
+            max-height: 400px;
+            border-radius: 10%;
         }
 
         h1 {
-            display: block;
             font-size: 2em;
-            margin-top: 0.67em;
-            margin-bottom: 0.67em;
-            margin-left: 0;
-            margin-right: 0;
+        }
+
+        p {
+            font-size: 1.1em;
+            margin: 10px 0;
+        }
+
+        .contact-container {
+            background-color: #111;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 0 15px #517667;
+        }
+
+        .contact-container h1 {
+            margin-bottom: 20px;
+            font-size: 28px;
+            color: #E9D8A6;
+        }
+
+        .contact-container a {
+            color: #94D2BD;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .contact-container a:hover {
+            color: #EE9B00;
+            text-decoration: underline;
+
+        }
+
+        .contact-container p {
+            color: #E9D8A6;
+            font-size: 18px;
+            margin: 20px 0;
+        }
+
+        .email {
+            margin-top: 20px;
+        }
+
+        .email p {
+            color: #E9D8A6;
+            text-decoration: none;
             font-weight: bold;
         }
 
-        section {
-            padding: 20px;
-            text-align: center;
-        }
-
-        /* Stylish Info Section */
-        #info p {
-            font-size: 1.1em;
-            font-style: italic;
-            line-height: 1.6;
-            max-width: 600px;
-            margin: 10px auto;
-        }
-
-        /* Stylish Services Section */
-        #services {
-            border: 2px solid #333;
-            border-radius: 8px;
-            background: #fff;
-            margin: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        #services h2 {
-            color: #222;
-            font-size: 1.5em;
-            margin-bottom: 15px;
-        }
-
-        #services ul {
-            list-style-type: disc;
-            padding-left: 20px;
-            text-align: left;
-            max-width: 400px;
-            margin: auto;
-        }
-
-        #services li {
-            margin: 10px 0;
-            font-size: 1.1em;
-            color: #444;
-        }
-
-        /* Contact Section */
-        #contact h2 {
-            font-size: 1.4em;
-            margin-bottom: 10px;
-        }
-
-        a {
-            color: #0066cc;
+        .email a {
+            color: #39ff14;
             text-decoration: none;
-            font-weight: 500;
+            font-weight: bold;
         }
 
-        a:hover {
+        .email a:hover {
+            text-decoration: underline;
+        }
+
+        .social {
+            margin-top: 20px;
+        }
+
+        .social p {
+            color: #E9D8A6;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .social a {
+            color: #0A9396;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .social a:hover {
+            color: #EE9B00;
+            text-decoration: underline;
+        }
+
+        .email {
+            margin-top: 20px;
+        }
+
+        .portfolio p {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .portfolio a {
+            color: #E9D8A6;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .portfolio a:hover {
             text-decoration: underline;
         }
 
         /* Mobile adjustments */
         @media (max-width: 600px) {
-            header h1 {
-                font-size: 1.4em;
+            h1 {
+                font-size: 0.9em;
             }
 
-            #info p {
-                font-size: 1em;
+            p,
+            .contact,
+            .email,
+            .social,
+            .portfolio {
+                font-size: 0.9em;
             }
 
-            #services h2,
-            #contact h2 {
-                font-size: 1.2em;
-            }
-
-            #services li {
-                font-size: 1em;
+            .logo img {
+                max-width: 300px;
             }
         }
     </style>
 </head>
 
 <body>
-    <!-- Header -->
-    <header>
-        <h1>Ogema Design Studio</h1>
-    </header>
+    <div class="container">
+        <!-- Logo -->
+        <div class="logo">
+            <img src="images\logos\logo_02.png" alt="Business Logo">
+        </div>
 
-    <!-- Information Section -->
-    <section id="info">
-        <p>Your destination for precision woodworking, laser cutting and engraving services!</p>
-    </section>
+        <!-- Coming Soon -->
+        <br>
+        <p>Website coming soon!</p>
+        <br>
 
-    <!-- Services Section -->
-    <section id="services">
-        <h2>Our Services</h2>
-        <p>We transform ordinary materials into extraordinary creations.</p>
-        <ul>
-            <li>Custom Woodworking Projects</li>
-            <li>Laser Engraved Placks and Trophies</li>
-            <li>Laser Engraved Flasks & Tumblers</li>
-            <li>Personalized Gifts & Decor</li>
-        </ul>
-    </section>
+        <!-- Contact Information -->
+        <div class="contact-container">
+            <h1>Contact Us</h1>
+            <hr>
 
-    <!-- Contact Us Section -->
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>Email: <a href="mailto:Steve@OgemaDesignStudio.com">Steve@OgemaDesignStudio.com</a></p>
-        <p>Facebook: <a href="https://www.facebook.com/OgemaDesignStudio" target="_blank">Ogema Design Studio</a></p>
-    </section>
+                <!-- Link to Email -->
+                <p>Email: <a href="mailto:Sales@OgemaDesignStudio.com">Sales@OgemaDesignStudio.com</a></p>
+
+                <!-- Link to Facebook -->
+                <p>Follow us on <a href="https://www.facebook.com/OgemaDesignStudio" target="_blank">Facebook</a></p>
+
+
+                <!-- Link to Portfolio
+                <a href="portfolio.html" class="button button1">View Our Portfolio</a>
+ -->
+            <br>
+        </div>
+    </div>
 </body>
 
 </html>
