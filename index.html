@@ -6,6 +6,23 @@
     <title>Ogema Design Studio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+        /* --- HEADER WITH BUTTONS --- */
+        header {
+            background: #222;
+            color: #E9D8A6;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-buttons a {
+            color: #E9D8A6;
+            text-decoration: none;
+            margin-right: 15px;
+            font-weight: bold;
+        }
+
         body {
             background-color: #001e26;
             color: #E9D8A6;
@@ -206,22 +223,30 @@
         }
     </style>
 </head>
+<!-- HEADER WITH NAVIGATION BUTTONS -->
+<header>
+
+    <div class="nav-buttons">
+        <!-- Replace # with your actual links -->
+        <a href="portfolio.html">Portfolio</a>
+        <a href="https://facebook.com/OgemaDesignStudio">Facebook</a>
+    </div>
+</header>
 
 <body>
     <div class="container">
-        <!-- Logo -->
-        <div class="logo">
-            <img src="images\logos\logo_02.png">
-        </div>
         <section class="services">
-            <hr>
+            <!-- Logo -->
+            <div class="logo">
+                <img src="images\logos\logo_02.png">
+            </div>
             <br>
+            <hr>
             <p>
                 At Ogema Design Studio, we blend craftsmanship and creativity to bring your ideas to life. <br>Whether
                 you're looking for a personalized gift or a custom-built piece for your home, we offer a wide range of
                 laser engraving and woodworking services.
             </p>
-            <!--
             <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:10px; margin-bottom:10px;">
                 <div style="flex:1; min-width:200px;">
                     <h3>Laser Engraving</h3>
@@ -240,7 +265,6 @@
                     </ul>
                 </div>
             </div>
--->
             <br>
             <hr>
             <br>
@@ -253,18 +277,7 @@
             <hr>
             <!-- Link to Email -->
             <p>Email: <a href="mailto:Info@OgemaDesignStudio.com">Info@OgemaDesignStudio.com</a></p>
-            <!-- Link to Facebook -->
-            <p>Follow us on <a href="https://www.facebook.com/OgemaDesignStudio" target="_blank">Facebook</a></p>
-            <!-- Link to Portfolio
-                <a href="portfolio.html" class="button button1">View Our Portfolio</a>
- -->
-            <br>
-        </div>
-        <!-- Coming Soon -->
-        <br>
-        <p>Full website coming soon!</p>
-        <br>
-    </div>
+
 </body>
 
 </html>
