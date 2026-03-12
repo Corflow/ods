@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Ogema Design Studio</title>
+
+    <style>
+        /* --- BASIC PAGE STYLING --- */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #001e26;
+        }
+
+        /* --- HEADER WITH BUTTONS --- */
+        header {
+            background: #222;
+            color: #E9D8A6;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-buttons a {
+            color: #E9D8A6;
+            text-decoration: none;
+            margin-right: 15px;
+            font-weight: bold;
+        }
+
+        /* --- GRID LAYOUT FOR IMAGES --- */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            padding: 20px;
+        }
+
+        /* --- IMAGE CONTAINER --- */
+        .item {
+            background: #daa65c;
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 0 15px #517667;
+        }
+
+        /* --- IMAGES AUTO‑RESIZE WHILE KEEPING QUALITY --- */
+        .item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* --- LIGHTBOX OVERLAY --- */
+        .lightbox {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            z-index: 9999;
+            padding-top: 60px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background: rgba(0, 0, 0, 0.9);
+        }
+
+        /* --- LIGHTBOX IMAGE --- */
+        .lightbox-img {
+            display: block;
+            margin: auto;
+            max-width: 90%;
+            max-height: 80vh;
+            border-radius: 6px;
+        }
+
+        /* --- CAPTION TEXT --- */
+        .lightbox-caption {
+            margin: 15px auto;
+            text-align: center;
+            color: #f1f1f1;
+            font-size: 1rem;
+            max-width: 80%;
+        }
+
+        /* --- CLOSE BUTTON --- */
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* --- MOBILE FRIENDLY --- */
+        @media (max-width: 600px) {
+            .lightbox-img {
+                max-width: 95%;
+                max-height: 70vh;
+            }
+
+            .close {
+                font-size: 32px;
+                right: 20px;
+            }
+        }
+
+
+        /* --- DESCRIPTION TEXT --- */
+        .description {
+            font-family: Arial, sans-serif;
+            font-weight: bolder;
+            text-align: center;
+            vertical-align: middle;
+            padding: 20px;
+            font-size: 0.9rem;
+            color: #001e26;
+        }
+
+        /* --- MOBILE FRIENDLY TEXT SIZE --- */
+        @media (max-width: 600px) {
+            .description {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER WITH NAVIGATION BUTTONS -->
+    <header>
+
+        <div class="nav-buttons">
+            <!-- Replace # with your actual links -->
+            <a href="https://OgemaDesignStudio.com">Home</a>
+            <a href="https://facebook.com/OgemaDesignStudio">Facebook</a>
+        </div>
+    </header>
+
+    <!-- PORTFOLIO GRID -->
+    <div class="portfolio-grid">
+
+        <!-- ITEM 1 -->
+        <div class="item">
+            <!-- Replace image.jpg with your image file -->
+            <img src="images\Home_Sweet_Home.png" alt="Home Sweet Home">
+            <div class="description">
+                <!-- Add your description here -->
+                Custom hand made signs.
+            </div>
+        </div>
+
+        <!-- ITEM 2 -->
+        <div class="item">
+            <img src="images\Flask_Queen.png" alt="Custom Engraved Flasks">
+            <div class="description">
+                Personalized engraved Flasks.
+            </div>
+        </div>
+
+        <!-- ITEM 3 -->
+        <div class="item">
+            <img src="images\Cutting_Board.png" alt="Custom Engraved Cutting board">
+            <div class="description">
+                Cutting board with any design.
+            </div>
+        </div>
+
+        <!-- ITEM 4 -->
+        <div class="item">
+            <!-- Replace image.jpg with your image file -->
+            <img src="images\Coaster_Grandpa.png" alt="Custom Coaster">
+            <div class="description">
+                <!-- Add your description here -->
+                Custom engraved Coasters.
+            </div>
+        </div>
+
+        <!-- ITEM 5 -->
+        <div class="item">
+            <img src="images\Business_Cards.png" alt="Custom Engraved Business Cards">
+            <div class="description">
+                Custom engraved Business Cards.
+            </div>
+        </div>
+
+        <!-- ITEM 6 -->
+        <div class="item">
+            <img src="images\Tumbler_Custom.png" alt="Custom Engraved Tumblers">
+            <div class="description">
+                Personalized engraved Tumblers.
+            </div>
+        </div>
+
+        <!-- Duplicate the block above to add more items -->
+    </div>
+
+    <!-- LIGHTBOX POPUP -->
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox-img" id="lightbox-img">
+        <div class="lightbox-caption" id="lightbox-caption"></div>
+
+    </div>
+    <script>
+        // Get lightbox elements
+        const lightbox = document.getElementById("lightbox");
+        const lightboxImg = document.getElementById("lightbox-img");
+        const lightboxCaption = document.getElementById("lightbox-caption");
+        const closeBtn = document.querySelector(".close");
+
+        // Attach click event to all portfolio images
+        document.querySelectorAll(".item img").forEach(img => {
+            img.addEventListener("click", () => {
+                lightbox.style.display = "block";
+                lightboxImg.src = img.src;
+
+                // Pull description text from the next sibling element
+                const caption = img.parentElement.querySelector(".description").innerText;
+                lightboxCaption.innerText = caption;
+            });
+        });
+
+        // Close lightbox
+        closeBtn.onclick = () => lightbox.style.display = "none";
+
+        // Close when clicking outside the image
+        lightbox.onclick = (e) => {
+            if (e.target === lightbox) {
+                lightbox.style.display = "none";
+            }
+        };
+    </script>
+
+</body>
+
+</html>
