@@ -139,6 +139,19 @@
             margin: 0 auto 0px;
         }
 
+        .services-list{
+            display:flex; 
+            flex-wrap:wrap; 
+            justify-content:center; 
+            gap:10px; 
+            margin-bottom:10px;
+        }
+
+        .services-list-items{
+            flex:1; 
+            min-width:200px;
+        }
+
         .email {
             margin-top: 20px;
         }
@@ -247,6 +260,10 @@
                 font-size: 18px;
             }
 
+            .services.p {
+                text-align: justify;
+            }
+
             .logo img {
                 max-width: 400px;
             }
@@ -278,8 +295,8 @@
                 you're looking for a personalized gift or a custom-built piece for your home, we offer a wide range of
                 laser engraving and woodworking services.
             </p>
-            <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:10px; margin-bottom:10px;">
-                <div style="flex:1; min-width:200px;">
+            <div class="services-list">
+                <div class="services-list-items">
                     <h3>Laser Engraving</h3>
                     <ul>
                         <li>Flasks, Tumblers</li>
@@ -287,7 +304,7 @@
                         <li>Personal items and keepsakes</li>
                     </ul>
                 </div>
-                <div style="flex:1; min-width:280px;">
+                <div class="services-list-items">
                     <h3>Woodworking</h3>
                     <ul>
                         <li>Pictures and Picture Frames</li>
