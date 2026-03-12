@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ogema Design Studio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
@@ -24,7 +24,8 @@
         .nav-buttons a {
             color: #E9D8A6;
             text-decoration: none;
-            margin-right: 15px;
+            margin-right: 10px;
+            margin-left: 10px;
             font-weight: bold;
         }
 
@@ -139,17 +140,17 @@
             margin: 0 auto 0px;
         }
 
-        .services-list{
-            display:flex; 
-            flex-wrap:wrap; 
-            justify-content:center; 
-            gap:10px; 
-            margin-bottom:10px;
+        .services-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 10px;
         }
 
-        .services-list-items{
-            flex:1; 
-            min-width:200px;
+        .services-list-items {
+            flex: 1;
+            min-width: 200px;
         }
 
         .email {
@@ -211,69 +212,6 @@
 
         .portfolio a:hover {
             text-decoration: underline;
-        }
-
-        /* Mobile adjustments */
-        @media (max-width: 600px) {
-            .nav-buttons {
-                align-items: center;
-            }
-            h1 {
-                font-size: 28px;
-            }
-
-            h2 {
-                font-size: 20px;
-            }
-
-            h3 {
-                font-size: 18px;
-            }
-
-            p,
-            .contact,
-            .social,
-            .services,
-            .contact-container {
-                font-size: 14px;
-            }
-
-            .logo img {
-                max-width: 300px;
-            }
-        }
-                @media (min-width: 768px) {
-            h1 {
-                font-size: 32px;
-            }
-
-            h2 {
-                font-size: 24px;
-            }
-
-            h3 {
-                font-size: 22px;
-            }
-
-            p,
-            .contact,
-            .social,
-            .services,
-            .contact-container {
-                font-size: 18px;
-            }
-
-            .contact-container.a {
-                font-size: 12px;
-            }
-
-            .services.p {
-                text-align: justify;
-            }
-
-            .logo img {
-                max-width: 400px;
-            }
         }
     </style>
 </head>
