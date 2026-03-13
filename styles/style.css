@@ -107,7 +107,7 @@ p {
 }
 
 .services p {
-    text-align: center;
+    text-align: left;
     font-size: 20px;
     max-width: 600px;
     margin: 0 auto 0px;
@@ -191,6 +191,10 @@ p {
     border-radius: 6px;
     overflow: hidden;
     color: #001e26;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: auto;
+    padding: 10px;
     box-shadow: 0 0 15px #517667;
 }
 
@@ -263,16 +267,11 @@ p {
         font-size: 18px;
     }
 
+    p,
     .contact,
     .services,
     .contact-container {
         font-size: 14px;
-    }
-
-    p {
-        font-size: 14px;
-        text-align: justify;
-        text-justify: inter-character;
     }
 
     .contact-container.a {
