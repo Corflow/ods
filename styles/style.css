@@ -11,8 +11,10 @@
         color: #E9D8A6;
         padding: 15px;
         display: flex;
-        justify-content: space-between;
+        display: flex;
+        justify-content: center;
         align-items: center;
+        align-content: center;
     }
 
     /* --- HEADER BUTTONS --- */
@@ -22,6 +24,7 @@
         margin-right: 10px;
         margin-left: 10px;
         font-weight: bold;
+        align-content: center;
     }
 
     /* --- GLOBAL BODY SETTINGS --- */
@@ -187,6 +190,7 @@
         background: #daa65c;
         border-radius: 6px;
         overflow: hidden;
+        color: #001e26;
         box-shadow: 0 0 15px #517667;
     }
 
@@ -225,7 +229,7 @@
     .lightbox-caption {
         margin: 15px auto;
         text-align: center;
-        color: #f1f1f1;
+        color: #E9D8A6;
         font-size: 1rem;
         max-width: 80%;
     }
@@ -235,7 +239,7 @@
         position: absolute;
         top: 20px;
         right: 35px;
-        color: #fff;
+        color: #E9D8A6;
         font-size: 40px;
         font-weight: bold;
         cursor: pointer;
