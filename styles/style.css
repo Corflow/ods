@@ -194,6 +194,7 @@ p {
     font-weight: bold;
     font-size: 16px;
     margin-top: auto;
+    margin-bottom: auto;
     padding: 10px;
     box-shadow: 0 0 15px #517667;
 }
@@ -281,6 +282,16 @@ p {
     .logo img {
         max-width: 300px;
     }
+
+    .item {
+    border-radius: 3px;
+    color: #001e26;
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 5px;
+    }
 }
 
 @media (min-width: 768px) {
@@ -302,10 +313,6 @@ p {
     .services,
     .contact-container {
         font-size: 18px;
-    }
-
-    .services.p {
-        text-align: justify;
     }
 
     .logo img {
